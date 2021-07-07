@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import ar.edu.unlam.comestibles.Comestible;
+
 public class CasosDePrueba {
 
 	@Test

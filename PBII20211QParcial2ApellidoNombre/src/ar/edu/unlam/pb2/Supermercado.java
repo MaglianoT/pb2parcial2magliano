@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Supermercado {
 	
@@ -16,15 +17,18 @@ public class Supermercado {
 	Integer contadorDeVentas; // Identificador del número de venta
 	
 	public Supermercado(String nombre) {
-		// Constructor de la clase
+		this.nombre = nombre;
+		this.productosExistentes = new TreeSet <Producto>();
+		this.productosDisponibles = new ArrayList<>();
+		this.ventasRealizadas = new HashMap <Integer, Venta>();
 	}
 
 	public void ingresarProducto(Producto nuevo) {
-		// Ingresa un nuevo producto		
+		productosExistentes.add(nuevo);
 	}
 
 	public Set<Producto> getOfertaDeProductos() {
-		// Devuelve el conjunto de productos que se comercializan
+		return this.productosExistentes;
 	}
 	
 	public Integer getStock(Integer codigo) {
