@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import ar.edu.unlam.interfaces.Comestible;
+import ar.edu.unlam.interfaces.Indumentaria;
 
 public class CasosDePrueba {
 
@@ -59,7 +60,7 @@ public class CasosDePrueba {
 	
 	@Test
 	public void queSePuedaInstanciarOtraIndumentaria() {
-		Indumentaria producto = new Zapatilla(6, "De running", 42, "Nike", "Blancas", 5000.0);
+		Indumentaria producto = new Zapatilla(6, "De running", "42", "Nike", "Blancas", 5000.0);
 		
 		assertEquals("De running", ((Zapatilla)producto).getDescripcion());
 		assertEquals("42", producto.getTalle());
@@ -77,8 +78,8 @@ public class CasosDePrueba {
 		vital.ingresarProducto(new Televisor(3, "Serie Dorada", 42, 12, "Samsung", 200000.0));
 		vital.ingresarProducto(new Heladera(4, "Nuevo Modelo", true, 12, "Samsung", 150000.0));
 		vital.ingresarProducto(new Remera(5, "Básica", "XL", "Lacoste", "Azul", 2000.0));
-		vital.ingresarProducto(new Zapatilla(6, "De running", 42, "Nike", "Blancas", 5000.0));
-		vital.ingresarProducto(new Zapatilla(7, "Diarias", 45, "Topper", "Blancas", 2500.0));
+		vital.ingresarProducto(new Zapatilla(6, "De running", "42", "Nike", "Blancas", 5000.0));
+		vital.ingresarProducto(new Zapatilla(7, "Diarias", "45", "Topper", "Blancas", 2500.0));
 		vital.ingresarProducto(new Televisor(8, "3D", 75, 12, "LG", 500000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "L", "Lacoste", "Azul", 2000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "M", "Lacoste", "Roja", 2000.0));
@@ -105,8 +106,8 @@ public class CasosDePrueba {
 		vital.ingresarProducto(new Televisor(3, "Serie Dorada", 42, 12, "Samsung", 200000.0));
 		vital.ingresarProducto(new Heladera(4, "Nuevo Modelo", true, 12, "Samsung", 150000.0));
 		vital.ingresarProducto(new Remera(5, "Básica", "XL", "Lacoste", "Azul", 2000.0));
-		vital.ingresarProducto(new Zapatilla(6, "De running", 42, "Nike", "Blancas", 5000.0));
-		vital.ingresarProducto(new Zapatilla(7, "Diarias", 45, "Topper", "Blancas", 2500.0));
+		vital.ingresarProducto(new Zapatilla(6, "De running", "42", "Nike", "Blancas", 5000.0));
+		vital.ingresarProducto(new Zapatilla(7, "Diarias", "45", "Topper", "Blancas", 2500.0));
 		vital.ingresarProducto(new Televisor(8, "3D", 75, 12, "LG", 500000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "L", "Lacoste", "Azul", 2000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "M", "Lacoste", "Roja", 2000.0));

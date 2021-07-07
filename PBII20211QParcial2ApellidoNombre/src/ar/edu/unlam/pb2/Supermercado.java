@@ -33,9 +33,7 @@ public class Supermercado {
 	
 	public Integer getStock(Integer codigo) {
 		for(Producto disponible: productosDisponibles) {
-			if(disponible.getCodigo().equals(codigo)) {
-				
-			}
+			
 		}
 	}
 	
