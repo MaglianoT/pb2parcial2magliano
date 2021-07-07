@@ -1,6 +1,6 @@
 package ar.edu.unlam.pb2;
 
-public class Producto {
+public class Producto implements Comparable<Producto> {
 
 	private Integer codigo;
 	private String marca;
@@ -70,6 +70,12 @@ public class Producto {
 		} else if (!codigo.equals(other.codigo))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Producto o) {
+		
+		return this.codigo.compareTo(o.codigo);
 	}
 
 	

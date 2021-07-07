@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
+
 
 public class Supermercado {
 	
@@ -18,13 +18,14 @@ public class Supermercado {
 	
 	public Supermercado(String nombre) {
 		this.nombre = nombre;
-		this.productosExistentes = new TreeSet <Producto>();
+		this.productosExistentes = new HashSet <Producto>();
 		this.productosDisponibles = new ArrayList<>();
 		this.ventasRealizadas = new HashMap <Integer, Venta>();
 	}
 
 	public void ingresarProducto(Producto nuevo) {
 		productosExistentes.add(nuevo);
+		productosDisponibles.add(nuevo);
 	}
 
 	public Set<Producto> getOfertaDeProductos() {
@@ -55,7 +56,6 @@ public class Supermercado {
 	}
 	
 	private Producto getProductoPorCodigo(Integer codigoDeProducto) throws ProductoSinStock {
-		
 		for(Producto producto: productosDisponibles) {
 			if(producto.getCodigo().equals(codigoDeProducto)) {
 				return producto;
@@ -68,13 +68,14 @@ public class Supermercado {
 	}
 	
 	public Integer registrarNuevaVenta(Integer dniDelComprador, String nombreDelComprador) {
-		ventasRealizadas.put(++contadorDeVentas, new Venta(dniDelComprador, nombreDelComprador));
+		Venta ventaRealizada = new Venta(dniDelComprador, nombreDelComprador);
+		ventasRealizadas.put(++contadorDeVentas, ventaRealizada);
 		return contadorDeVentas;
 	}
 	
 	public Venta getVenta(Integer nueroDeVenta) {
 		return ventasRealizadas.get(nueroDeVenta);	
-		}
+	}
 	
 
 	public void agregarAlCarrito(Integer numeroDeVenta, Integer codigoDeProducto) throws ProductoSinStock, ProductoInexistente {
@@ -82,7 +83,7 @@ public class Supermercado {
 		if(productoExiste(codigoDeProducto)) {
 			for(Producto producto: productosDisponibles) {
 				if(producto.getCodigo().equals(codigoDeProducto)) {
-					
+					ingresarProducto(producto);
 				} else {
 					throw new ProductoSinStock();
 				}

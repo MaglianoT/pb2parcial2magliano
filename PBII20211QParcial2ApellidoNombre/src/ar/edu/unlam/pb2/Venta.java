@@ -6,8 +6,8 @@ public class Venta {
 	private Double importe;
 	
 	public Venta(Integer dniDelComprador, String nombreDelComprador) {
-		this.setDniComprador(dniDelComprador);
-		this.setNombreComprador(nombreDelComprador);
+		this.dniComprador = dniDelComprador;
+		this.nombreComprador = nombreDelComprador;
 	}
 
 	public Integer getDniComprador() {
@@ -28,6 +28,10 @@ public class Venta {
 
 	public double getImporte() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.importe;
+	}
+
+	public void setImporte(Double importe) {
+		this.importe = importe;
 	}
 }

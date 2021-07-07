@@ -2,5 +2,5 @@ package ar.edu.unlam.interfaces;
 
 public interface Electrodomesticos {
 
-	public 
+	public Integer getGarantia();
 }

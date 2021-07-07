@@ -15,7 +15,7 @@ public class Heladera extends Producto implements Electrodomestico {
 	@Override
 	public Integer getGarantia() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.garantia;
 	}
 
 	public void setIsFrost(Boolean isFrost) {

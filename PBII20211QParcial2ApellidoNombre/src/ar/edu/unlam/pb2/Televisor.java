@@ -14,13 +14,13 @@ public class Televisor extends Producto implements Electrodomestico {
 
 	public Object getPulgadas() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.pulgadas;
 	}
 
 	@Override
 	public Integer getGarantia() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.garantia;
 	}
 
 	public void setGarantia(Integer garantia) {
