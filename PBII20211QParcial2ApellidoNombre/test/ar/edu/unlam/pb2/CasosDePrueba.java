@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import ar.edu.unlam.comestibles.Comestible;
+import ar.edu.unlam.interfaces.Comestible;
 
 public class CasosDePrueba {
 

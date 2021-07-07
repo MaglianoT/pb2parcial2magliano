@@ -32,15 +32,30 @@ public class Supermercado {
 	}
 	
 	public Integer getStock(Integer codigo) {
-		// Devuelve la cantidad de unidades de un producto determinado
+		for(Producto disponible: productosDisponibles) {
+			if(disponible.getCodigo().equals(codigo)) {
+				
+			}
+		}
 	}
 	
 	private Boolean productoExiste(Integer codigoDeProducto) throws ProductoInexistente{
-		// Verifica si un producto existe
+		Boolean existe = false;
+		for (Producto producto: productosExistentes) {
+			if(producto.getCodigo().equals(codigoDeProducto)) {
+				existe = true;
+			} else {
+				throw new ProductoInexistente();
+			}
+		}
+		
+		return existe;
 	}
 	
 	private Producto getProductoPorCodigo(Integer codigoDeProducto) throws ProductoSinStock {
-		// Busca la disponibilidad de un producto
+		for(Producto producto: productosDisponibles) {
+			
+		}
 	}
 	
 	public Integer registrarNuevaVenta(Integer dniDelComprador, String nombreDelComprador) {

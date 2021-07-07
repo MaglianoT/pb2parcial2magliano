@@ -7,29 +7,33 @@ public class Galletitas extends Producto implements Comestible {
 	private String fechaElab;
 	private String fechaVenc;
 	
-	public Galletitas (Integer codigo, String nombre, String fechaElab, String fechaVenc, 
+	public Galletitas (Integer codigo, String descripcion, String fechaElab, String fechaVenc, 
 			String marca, Double precio) {
-		super(codigo, nombre, marca, precio);
+		super(codigo, descripcion, marca, precio);
 		this.fechaElab = fechaElab;
 		this.fechaVenc = fechaVenc;
 	}
 
-	public String getFechaElab() {
+	public String getFechaDeElaboracion() {
 		return fechaElab;
 	}
 
-	public void setFechaElab(String fechaElab) {
+	public void setFechaDeElaboracion(String fechaElab) {
 		this.fechaElab = fechaElab;
 	}
 
-	public String getFechaVenc() {
+	public String getFechaDeVencimiento() {
 		return fechaVenc;
 	}
 
-	public void setFechaVenc(String fechaVenc) {
+	public void setFechaDeVencimiento(String fechaVenc) {
 		this.fechaVenc = fechaVenc;
 	}
 
+	public String getDescripcion() {
+	 return super.getDescripcion();
+	}
+	
 
 
 }
