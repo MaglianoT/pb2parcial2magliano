@@ -32,42 +32,64 @@ public class Supermercado {
 	}
 	
 	public Integer getStock(Integer codigo) {
+		Integer contadorProducto = 0;
 		for(Producto disponible: productosDisponibles) {
-			
+			if(disponible.getCodigo().equals(codigo)) {
+				contadorProducto++;
+			}
 		}
+		
+		return contadorProducto;
 	}
 	
 	private Boolean productoExiste(Integer codigoDeProducto) throws ProductoInexistente{
-		Boolean existe = false;
 		for (Producto producto: productosExistentes) {
 			if(producto.getCodigo().equals(codigoDeProducto)) {
-				existe = true;
+				return true;
 			} else {
 				throw new ProductoInexistente();
 			}
 		}
 		
-		return existe;
+		return false;
 	}
 	
 	private Producto getProductoPorCodigo(Integer codigoDeProducto) throws ProductoSinStock {
+		
 		for(Producto producto: productosDisponibles) {
-			
+			if(producto.getCodigo().equals(codigoDeProducto)) {
+				return producto;
+			} else {
+				throw new ProductoSinStock();
+			}
 		}
+		
+		return null;
 	}
 	
 	public Integer registrarNuevaVenta(Integer dniDelComprador, String nombreDelComprador) {
-		// Registra una nueva venta
 		ventasRealizadas.put(++contadorDeVentas, new Venta(dniDelComprador, nombreDelComprador));
 		return contadorDeVentas;
 	}
 	
 	public Venta getVenta(Integer nueroDeVenta) {
-		// Devuelve una venta en función de su número identificatorio
-	}
+		return ventasRealizadas.get(nueroDeVenta);	
+		}
+	
 
 	public void agregarAlCarrito(Integer numeroDeVenta, Integer codigoDeProducto) throws ProductoSinStock, ProductoInexistente {
 		// Incorpora al carrito de compras de la venta identificada por el "numeroDeVenta", el producto identificado por el "codigoDeProducto"
+		if(productoExiste(codigoDeProducto)) {
+			for(Producto producto: productosDisponibles) {
+				if(producto.getCodigo().equals(codigoDeProducto)) {
+					
+				} else {
+					throw new ProductoSinStock();
+				}
+			}
+		} else {
+			throw new ProductoInexistente();
+		}
 	}
 	
 

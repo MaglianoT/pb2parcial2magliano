@@ -120,10 +120,8 @@ public class CasosDePrueba {
 			vital.agregarAlCarrito(numeroDeVenta, PRODUCTO_A_COMPRAR_1);
 			vital.agregarAlCarrito(numeroDeVenta, PRODUCTO_A_COMPRAR_2);
 		} catch (ProductoSinStock e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ProductoInexistente e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -142,8 +140,8 @@ public class CasosDePrueba {
 		vital.ingresarProducto(new Televisor(3, "Serie Dorada", 42, 12, "Samsung", 200000.0));
 		vital.ingresarProducto(new Heladera(4, "Nuevo Modelo", true, 12, "Samsung", 150000.0));
 		vital.ingresarProducto(new Remera(5, "Básica", "XL", "Lacoste", "Azul", 2000.0));
-		vital.ingresarProducto(new Zapatilla(6, "De running", 42, "Nike", "Blancas", 5000.0));
-		vital.ingresarProducto(new Zapatilla(7, "Diarias", 45, "Topper", "Blancas", 2500.0));
+		vital.ingresarProducto(new Zapatilla(6, "De running", "42", "Nike", "Blancas", 5000.0));
+		vital.ingresarProducto(new Zapatilla(7, "Diarias", "45", "Topper", "Blancas", 2500.0));
 		vital.ingresarProducto(new Televisor(8, "3D", 75, 12, "LG", 500000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "L", "Lacoste", "Azul", 2000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "M", "Lacoste", "Roja", 2000.0));
@@ -167,8 +165,8 @@ public class CasosDePrueba {
 		vital.ingresarProducto(new Televisor(3, "Serie Dorada", 42, 12, "Samsung", 200000.0));
 		vital.ingresarProducto(new Heladera(4, "Nuevo Modelo", true, 12, "Samsung", 150000.0));
 		vital.ingresarProducto(new Remera(5, "Básica", "XL", "Lacoste", "Azul", 2000.0));
-		vital.ingresarProducto(new Zapatilla(6, "De running", 42, "Nike", "Blancas", 5000.0));
-		vital.ingresarProducto(new Zapatilla(7, "Diarias", 45, "Topper", "Blancas", 2500.0));
+		vital.ingresarProducto(new Zapatilla(6, "De running", "42", "Nike", "Blancas", 5000.0));
+		vital.ingresarProducto(new Zapatilla(7, "Diarias", "45", "Topper", "Blancas", 2500.0));
 		vital.ingresarProducto(new Televisor(8, "3D", 75, 12, "LG", 500000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "L", "Lacoste", "Azul", 2000.0));
 		vital.ingresarProducto(new Remera(9, "Básica", "M", "Lacoste", "Roja", 2000.0));
